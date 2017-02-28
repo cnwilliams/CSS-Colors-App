@@ -1,0 +1,14 @@
+<!--   <div class="form-group">
+    <label class="col-md-4 control-label">Search Color by Hex</label>
+    <div class="col-md-4">
+    <input type="text" class="form-control center-block col-md-4" ng-model="searchText" placeholder="Search Colors">
+  </div>
+</div> -->
+
+<div ng-repeat="color in cic.colors | filter: seachText" >
+  <div style="background:{{ color.hex }}" class="circle col-md-1">
+    <a ng-href="colors/{{ color.hex }}">
+      <button type="button" class="btn btn-circle im-responsive" style="background-color:{{ color.hex }}" ></button>
+    </a>
+  </div>
+</div>
