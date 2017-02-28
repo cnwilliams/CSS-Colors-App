@@ -1,3 +1,5 @@
+console.log("app.js is running!")
+
 angular
   .module("colorsApp", ["ngRoute"])
   .config(config);
@@ -7,14 +9,14 @@ config.$inject = ["$routeProvider", "$locationProvider"]
 function config(   $routeProvider,   $locationProvider) {
   $routeProvider
     .when("/", {
-      templateUrl: "templates/colors-index.html",
-      controllerAs: "cis",
+      templateUrl: "/templates/colors-index.html",
+      controllerAs: "cic",
       controller: "ColorsIndexController"
     })
-    .when("/colors/:id", {
-      templateUrl: "templates/colors-show.html",
+    .when("/colors/:hex", {
+      templateUrl: "/templates/colors-show.html",
       controllerAs: "csc",
-      controller: "ColorsShowControler"
+      controller: "ColorsShowController"
     });
 
     $locationProvider.html5Mode({

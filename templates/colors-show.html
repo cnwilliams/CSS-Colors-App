@@ -1,1 +1,10 @@
-<p>Hi! You're in the colors-show file &#xe420;</p>
+<div class="row center-block">
+  <h4>{{ csc.color.name }}</h4>
+  <div style="background:{{ csc.color.hex }}" class="circle-single">
+    <p>HEX: {{ csc.color.hex }}</p>
+    <p>RGB: {{ csc.color.rgb.r }}, {{ csc.color.rgb.g }}, {{ csc.color.rgb.b }}</p>
+
+      <button type="button" class="btn btn-circle im-responsive" style="background-color:{{ csc.color.hex }}"></button>
+
+  </div>
+</div>
